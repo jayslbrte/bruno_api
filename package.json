@@ -1,11 +1,8 @@
 {
-  "name": "bruno_api",
+  "name": "brunosample",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": "bruno explore api testing"
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1"
+  }
 }

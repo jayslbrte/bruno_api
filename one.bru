@@ -1,0 +1,27 @@
+meta {
+  name: Get user detail
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://jsonplaceholder.typicode.com/users/1
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+}
+tests{
+const payload = res.getBody();
+console.log(`payload:${JSON.stringify(payload,null,2)}`)
+
+test("response should be 200", function(){
+    expect(res.getStatus()).to.equal(200)
+  })
+
+test("verify that username is a type string and value is Bret", function(){
+    expect(payload.username).to.be.a('string')
+  })
+}
